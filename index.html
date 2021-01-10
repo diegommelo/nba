@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+        <div class="container">
+            <h1>
+            Build your $15<br/>
+            Team of the '20 Century
+            </h1>
+            <br/>
+            <div class="balance">
+                <h1>Balance: ${{bank.balance}}</h1> <br/>
+                <button @click="reset">Reset</button>
+            </div>
+            <div class="your_team">
+                <div class="columns is-5 is-mobile">
+                    <div v-for="player in bank.players" class="column">
+                        <figure class="image player">
+                            <img :src="player.pic" />
+                            <p> {{player.name}}</p>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="columns is-5 is-mobile">
+                <h1 class="title">$5</h1>
+                <div v-for="player in five" class="column" @click="buyPlayer(player)">
+                <figure class="image player">
+                    <img :src="player.pic" />
+                    <p> {{player.name}}</p>
+                </figure>
+                </div>
+            </div>  
+            <div class="columns is-5 is-mobile">
+                <h1 class="title">$4</h1>
+                <div v-for="player in four" class="column" @click="buyPlayer(player)">
+                <figure class="image player">
+                    <img :src="player.pic" />
+                    <p> {{player.name}}</p>
+                </figure>
+                </div>
+            </div> 
+            <div class="columns is-5 is-mobile">
+                <h1 class="title">$3</h1>
+                <div v-for="player in three" class="column" @click="buyPlayer(player)">
+                <figure class="image player">
+                    <img :src="player.pic" />
+                    <p> {{player.name}}</p>
+                </figure>
+                </div>
+            </div> 
+            <div class="columns is-5 is-mobile">
+                <h1 class="title">$2</h1>
+                <div v-for="player in two" class="column" @click="buyPlayer(player)">
+                <figure class="image player">
+                    <img :src="player.pic" />
+                    <p> {{player.name}}</p>
+                </figure>
+                </div>
+            </div>
+            <div class="columns is-5 is-mobile">
+                <h1 class="title">$1</h1>
+                <div v-for="player in one" class="column" @click="buyPlayer(player)">
+                <figure class="image player">
+                    <img :src="player.pic" />
+                    <p> {{player.name}}</p>
+                </figure>
+                </div>
+            </div>                                      
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> 
+    <script src="app.js"></script>   
+  </body>
+</html>

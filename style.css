@@ -1,0 +1,57 @@
+html {
+  background: #20262E;
+  padding: 20px;
+  font-family: Helvetica;
+}
+
+#app {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  transition: all 0.2s;
+  max-width: 600px;
+  margin:0 auto;
+}
+.main {
+    max-width: 600px;
+}
+li {
+  margin: 8px 0;
+}
+h1{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:10px;
+}
+.column {
+    text-align: center;
+}
+.column figure {
+    margin:0 auto;
+}
+h2 {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+del {
+  color: rgba(0, 0, 0, 0.3);
+}
+img {
+  width:44px;
+  height:68px;
+}
+p {
+  font-size:0.7rem;
+}
+.player {
+  width: 64px;
+}
+.balance {
+    margin-bottom:20px;
+    text-align: center;
+}
+.balance button{
+    margin-bottom: 20px;
+}
