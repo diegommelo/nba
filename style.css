@@ -1,6 +1,15 @@
 @media only screen and (max-width:768px){
     .player {
-        max-width: 32px !important;
+        max-width: 38px !important;
+      }
+      .price {
+          font-size:1.5rem !important;
+      }
+      .titulo {
+          font-size:1.5rem !important;
+      }
+      p {
+          font-size:0.7rem !important;
       }
 }
 html {
@@ -53,8 +62,8 @@ p {
 }
 .player {
   max-width: 64px;
-  border-radius: 25px;
 }
+.player
 .balance {
     margin-bottom:20px;
     text-align: center;
@@ -78,4 +87,8 @@ p {
     font-family: 'Graduate', cursive;
     font-size:2rem;
     font-weight: bold;
+}
+.price {
+    font-weight: bold;
+    font-size:2rem;
 }
