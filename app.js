@@ -25,7 +25,7 @@ new Vue({
     two: [
       { name: "Russel Westbrook", price: 2, pic:"https://www.basketball-reference.com/req/202101021/images/players/westbru01.jpg"},
       { name: "Ray Alen", price: 2, pic: "https://www.basketball-reference.com/req/202101021/images/players/allenra02.jpg"},
-      { name: "Gianis Antetokounmpo", price: 2, pic: "https://www.basketball-reference.com/req/202101021/images/players/antetgi01.jpg"},
+      { name: "Gianis", price: 2, pic: "https://www.basketball-reference.com/req/202101021/images/players/antetgi01.jpg"},
       { name: "Anthony Davis", price: 2, pic:"https://www.basketball-reference.com/req/202101021/images/players/davisan02.jpg"},
       { name: "Yao Ming", price: 2, pic: "https://www.basketball-reference.com/req/202101021/images/players/mingya01.jpg"}    
     ],
@@ -38,20 +38,35 @@ new Vue({
     ],    
     bank: {
     	balance: 15,
-      players:[]
-    }
+      players:[
+          {name: 'Player #1', pic:'avatar.jpeg'},
+          {name: 'Player #2', pic:'avatar.jpeg'},
+          {name: 'Player #3', pic:'avatar.jpeg'},
+          {name: 'Player #4', pic:'avatar.jpeg'},
+          {name: 'Player #5', pic:'avatar.jpeg'},                                        
+      ]
+    },
+    pick:0
   },
   methods: {
   	buyPlayer: function(player){
         let saldo = this.bank.balance - player.price
-        if(saldo >= 0 && this.bank.players.length < 5){
-            this.bank.players.push(player)
+        if(saldo >= 0 && this.pick<5){
+            this.bank.players[this.pick] = player;
             this.bank.balance = saldo;
+            this.pick+=1;
         }
     },
     reset: function(){
-        this.bank.players=[];
+        this.bank.players=[          
+            {name: 'Player #1', pic:'avatar.jpeg'},
+            {name: 'Player #2', pic:'avatar.jpeg'},
+            {name: 'Player #3', pic:'avatar.jpeg'},
+            {name: 'Player #4', pic:'avatar.jpeg'},
+            {name: 'Player #5', pic:'avatar.jpeg'},    
+      ];
         this.bank.balance=15;
+        this.pick=0;
     }
   }
 })
